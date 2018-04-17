@@ -8,10 +8,10 @@ tar -xzvf nginx-1.12.2.tar.gz
 wget https://github.com/arut/nginx-rtmp-module/zipball/master -O nginx-rtmp-module-master.zip
 unzip nginx-rtmp-module-master.zip -d nginx-rtmp-module-master
 cd nginx-1.12.2
-./configure --prefix=/usr --add-module=../nginx-rtmp-module-master/arut-nginx-rtmp-module-43f1e42/ --pid-path=/var/run/nginx.pid --conf-path=/etc/nginx/nginx.conf --error-log-path=/var/log/nginx/error.log --http-log-path=/var/log/nginx/access.log --with-http_ssl_module --with-http_secure_link_module
+./configure --prefix=/usr --add-module=../nginx-rtmp-module-master/arut-nginx-rtmp-module-791b613/ --pid-path=/var/run/nginx.pid --conf-path=/etc/nginx/nginx.conf --error-log-path=/var/log/nginx/error.log --http-log-path=/var/log/nginx/access.log --with-http_ssl_module --with-http_secure_link_module
 make
 sudo make install
-cp ../nginx-rtmp-module-master/arut-nginx-rtmp-module-43f1e42/stat.xsl /etc/nginx/
+cp ../nginx-rtmp-module-master/arut-nginx-rtmp-module-791b613/stat.xsl /etc/nginx/
 
 
 echo '---- install packet ----'
