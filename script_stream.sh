@@ -35,8 +35,10 @@ cd nginx-rtmp-config-master/local_settings.py stream/src/cms
 cd src
 mkdir static templates
 pip install -r requirements.txt
-./manage.py createsuperuser
+./manage.py makemigrations camera
+./manage.py migrate
 ./manage.py collectstatic
+./manage.py createsuperuser
 sudo ln -s /home/alexy/stream/supervisor/production.conf /etc/supervisor/conf.d/stream.conf
 sudo supervisorctl update
 sudo supervisorctl status
