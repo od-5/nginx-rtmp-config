@@ -32,4 +32,8 @@ pip install uwsgi
 git clone https://rylcev_alexy@bitbucket.org/rylcev_alexy/stream.git src
 cd src
 pip install -r requirements.txt
-
+sudo ln -s /home/alexy/stream/supervisor/production.conf /etc/supervisor/conf.d/stream.conf
+sudo supervisorctl update
+sudo supervisorctl status
+sudo nginx -s stop
+sudo nginx
