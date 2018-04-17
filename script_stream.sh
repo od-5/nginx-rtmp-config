@@ -33,6 +33,7 @@ pip install uwsgi
 git clone https://rylcev_alexy@bitbucket.org/rylcev_alexy/stream.git src
 cd nginx-rtmp-config-master/local_settings.py stream/src/cms
 cd src
+mkdir static templates
 pip install -r requirements.txt
 ./manage.py createsuperuser
 ./manage.py collectstatic
