@@ -17,6 +17,7 @@ cp ../nginx-rtmp-module-master/arut-nginx-rtmp-module-791b613/stat.xsl /etc/ngin
 echo '---- install packet ----'
 cd /home/alexy/
 mkdir stream stream/static stream/media/ stream/log stream/supervisor stream/supervisor/logs
+touch /home/alexy/stream/touch
 cp nginx-rtmp-config-master/uwsgi.ini stream/
 cp nginx-rtmp-config-master/production.conf stream/supervisor
 sudo cp nginx-rtmp-config-master/nginx.conf /etc/nginx/
@@ -30,8 +31,11 @@ virtualenv env
 source env/bin/activate
 pip install uwsgi
 git clone https://rylcev_alexy@bitbucket.org/rylcev_alexy/stream.git src
+cd nginx-rtmp-config-master/local_settings.py stream/src/cms
 cd src
 pip install -r requirements.txt
+./manage.py createsuperuser
+./manage.py collectstatic
 sudo ln -s /home/alexy/stream/supervisor/production.conf /etc/supervisor/conf.d/stream.conf
 sudo supervisorctl update
 sudo supervisorctl status
