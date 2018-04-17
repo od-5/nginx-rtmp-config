@@ -8,4 +8,5 @@ sudo apt-get update
 sudo apt-get install unzip
 wget https://github.com/od-5/nginx-rtmp-config/archive/master.zip
 unzip master.zip
+sudo nginx-rtmp-config-master/script_stream.sh
 ```
