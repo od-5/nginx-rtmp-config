@@ -1,8 +1,4 @@
 #!/bin/bash
-echo 'add user alexy'
-adduser alexy
-usermod -aG sudo alexy
-su alexy
 cd /home/alexy/
 sudo add-apt-repository ppa:jonathonf/ffmpeg-3
 sudo apt-get update
