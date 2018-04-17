@@ -2,6 +2,7 @@
 ```
 adduser alexy
 usermod -aG sudo alexy
+su alexy
 cd /home/alexy
 sudo apt-get update
 sudo apt-get install unzip
