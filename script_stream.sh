@@ -11,7 +11,7 @@ cd nginx-1.12.2
 ./configure --prefix=/usr --add-module=../nginx-rtmp-module-master/arut-nginx-rtmp-module-791b613/ --pid-path=/var/run/nginx.pid --conf-path=/etc/nginx/nginx.conf --error-log-path=/var/log/nginx/error.log --http-log-path=/var/log/nginx/access.log --with-http_ssl_module --with-http_secure_link_module
 make
 sudo make install
-cp ../nginx-rtmp-module-master/arut-nginx-rtmp-module-791b613/stat.xsl /etc/nginx/
+sudo cp ../nginx-rtmp-module-master/arut-nginx-rtmp-module-791b613/stat.xsl /etc/nginx/
 
 
 echo '---- install packet ----'
