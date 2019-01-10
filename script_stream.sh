@@ -33,6 +33,7 @@ pip install uwsgi
 git clone https://rylcev_alexy@bitbucket.org/rylcev_alexy/stream.git src
 cp ../nginx-rtmp-config-master/local_settings.py src/cms/
 cd src
+git checkout ver2.0
 mkdir static templates
 pip install -r requirements.txt
 ./manage.py makemigrations camera
