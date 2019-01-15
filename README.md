@@ -13,5 +13,5 @@ nginx-rtmp-config-master/script_stream.sh
 ```
 # в sudo crontab -e добавить
 ```
- */2 * * * * /home/alexy/stream/env/bin/python /home/alexy/stream/src/manage.    py stream_check
+ */2 * * * * /home/alexy/stream/env/bin/python /home/alexy/stream/src/manage.py stream_check
 ```
