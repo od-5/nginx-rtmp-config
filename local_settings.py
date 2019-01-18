@@ -15,6 +15,6 @@ DATABASES = {
     }
 }
 CAM_SECURE_KEY = 'secret'
-STREAM_ROOT = '/tmp/hls'
+STREAM_ROOT = '/mnt/data0/hls'
 CMD_KEY = '490683'
 
