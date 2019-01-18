@@ -22,7 +22,7 @@ cp nginx-rtmp-config-master/uwsgi.ini stream/
 cp nginx-rtmp-config-master/production.conf stream/supervisor
 sudo cp nginx-rtmp-config-master/nginx.conf /etc/nginx/
 sudo mkdir /etc/nginx/camera
-sudo cp nginx-rtmp-config-master/test.conf /etc/nginx/camera/
+sudo cp nginx-rtmp-config-master/test.conf /etc/nginx/camera/stream.conf
 echo '---- install packet ----'
 sudo pip install --upgrade pip
 sudo pip install virtualenv
@@ -40,6 +40,7 @@ pip install -r requirements.txt
 ./manage.py migrate
 ./manage.py collectstatic
 ./manage.py createsuperuser
+mkdir /mnt/data0/hls
 sudo ln -s /home/alexy/stream/supervisor/production.conf /etc/supervisor/conf.d/stream.conf
 sudo supervisorctl update
 sudo supervisorctl status
