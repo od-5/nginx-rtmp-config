@@ -5,7 +5,7 @@ sudo apt-get update
 sudo apt-get -y install libpcre3 libpcre3-dev libssl-dev unzip gcc make ffmpeg libav-tools x264 x265 git python-dev python-pip supervisor
 wget http://nginx.org/download/nginx-1.12.2.tar.gz
 tar -xzvf nginx-1.12.2.tar.gz 
-wget https://github.com/od-5/nginx-rtmp-config/archive/test.zip -O nginx-rtmp-module-master.zip
+wget https://github.com/arut/nginx-rtmp-module/zipball/master -O nginx-rtmp-module-master.zip
 unzip nginx-rtmp-module-master.zip -d nginx-rtmp-module-master
 cd nginx-1.12.2
 ./configure --prefix=/usr --add-module=../nginx-rtmp-module-master/arut-nginx-rtmp-module-791b613/ --pid-path=/var/run/nginx.pid --conf-path=/etc/nginx/nginx.conf --error-log-path=/var/log/nginx/error.log --http-log-path=/var/log/nginx/access.log --with-http_ssl_module --with-http_secure_link_module
