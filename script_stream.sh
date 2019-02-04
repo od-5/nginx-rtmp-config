@@ -1,5 +1,6 @@
 #!/bin/bash
 cd /home/alexy/
+mkdir /mnt/data0/logs /mnt/data0/logs/nginx
 sudo add-apt-repository ppa:jonathonf/ffmpeg-3
 sudo apt-get update
 sudo apt-get -y install libpcre3 libpcre3-dev libssl-dev unzip gcc make ffmpeg libav-tools x264 x265 git python-dev python-pip supervisor
