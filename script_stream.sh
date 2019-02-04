@@ -21,7 +21,7 @@ mkdir stream stream/static stream/media/ stream/log stream/supervisor stream/sup
 touch /home/alexy/stream/touch
 cp nginx-rtmp-config-ruvds/uwsgi.ini stream/
 cp nginx-rtmp-config-ruvds/production.conf stream/supervisor
-sudo cp nginx-rtmp-config-rivds/nginx.conf /etc/nginx/
+sudo cp nginx-rtmp-config-ruvds/nginx.conf /etc/nginx/
 sudo mkdir /etc/nginx/camera
 sudo cp nginx-rtmp-config-ruvds/test.conf /etc/nginx/camera/stream.conf
 echo '---- install packet ----'
