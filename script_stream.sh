@@ -18,11 +18,11 @@ echo '---- install packet ----'
 cd /home/alexy/
 mkdir stream stream/static stream/media/ stream/log stream/supervisor stream/supervisor/logs
 touch /home/alexy/stream/touch
-cp nginx-rtmp-config-master/uwsgi.ini stream/
-cp nginx-rtmp-config-master/production.conf stream/supervisor
-sudo cp nginx-rtmp-config-master/nginx.conf /etc/nginx/
+cp nginx-rtmp-config-test/uwsgi.ini stream/
+cp nginx-rtmp-config-test/production.conf stream/supervisor
+sudo cp nginx-rtmp-config-test/nginx.conf /etc/nginx/
 sudo mkdir /etc/nginx/camera
-sudo cp nginx-rtmp-config-master/test.conf /etc/nginx/camera/stream.conf
+sudo cp nginx-rtmp-config-test/test.conf /etc/nginx/camera/stream.conf
 echo '---- install packet ----'
 sudo pip install --upgrade pip
 sudo pip install virtualenv
@@ -31,7 +31,7 @@ virtualenv env
 source env/bin/activate
 pip install uwsgi
 git clone https://bitbucket.org/rylcev_alexy/stream.git src
-cp ../nginx-rtmp-config-master/local_settings.py src/cms/
+cp ../nginx-rtmp-config-test/local_settings.py src/cms/
 cd src
 git checkout ver2.0
 mkdir static templates
