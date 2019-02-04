@@ -7,7 +7,7 @@ cd /home/alexy
 sudo apt-get update
 sudo apt-get install unzip
 wget https://github.com/od-5/nginx-rtmp-config/archive/ruvds.zip
-unzip master.zip
+unzip ruvds.zip
 nginx-rtmp-config-ruvds/script_stream.sh
 
 ```
