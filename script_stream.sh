@@ -30,7 +30,7 @@ cd stream
 virtualenv env
 source env/bin/activate
 pip install uwsgi
-git clone https://rylcev_alexy@bitbucket.org/rylcev_alexy/stream.git src
+git clone https://bitbucket.org/rylcev_alexy/stream.git src
 cp ../nginx-rtmp-config-master/local_settings.py src/cms/
 cd src
 git checkout ver2.0
