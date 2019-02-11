@@ -15,6 +15,7 @@ DATABASES = {
     }
 }
 CAM_SECURE_KEY = 'secret'
-STREAM_ROOT = '/tmp/hls'
+WORK_PATH = '/tmp'
+STREAM_ROOT = os.path.join(WORK_PATH, 'hls')
 CMD_KEY = '490683'
 
