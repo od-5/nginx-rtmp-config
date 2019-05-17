@@ -1,6 +1,5 @@
 #!/bin/bash
 cd /home/alexy/
-mkdir /mnt/data0/logs /mnt/data0/logs/nginx
 sudo add-apt-repository ppa:jonathonf/ffmpeg-3
 sudo apt-get update
 sudo apt-get -y install libpcre3 libpcre3-dev libssl-dev unzip gcc make ffmpeg libav-tools x264 x265 git python-dev python-pip supervisor
@@ -19,11 +18,11 @@ echo '---- install packet ----'
 cd /home/alexy/
 mkdir stream stream/static stream/media/ stream/log stream/supervisor stream/supervisor/logs
 touch /home/alexy/stream/touch
-cp nginx-rtmp-config-ruvds/uwsgi.ini stream/
-cp nginx-rtmp-config-ruvds/production.conf stream/supervisor
-sudo cp nginx-rtmp-config-ruvds/nginx.conf /etc/nginx/
+cp nginx-rtmp-config-ruvds-non-big/uwsgi.ini stream/
+cp nginx-rtmp-config-ruvds-non-big/production.conf stream/supervisor
+sudo cp nginx-rtmp-config-ruvds-non-big/nginx.conf /etc/nginx/
 sudo mkdir /etc/nginx/camera
-sudo cp nginx-rtmp-config-ruvds/test.conf /etc/nginx/camera/stream.conf
+sudo cp nginx-rtmp-config-ruvds-non-big/test.conf /etc/nginx/camera/stream.conf
 echo '---- install packet ----'
 sudo pip install --upgrade pip
 sudo pip install virtualenv
@@ -32,7 +31,7 @@ virtualenv env
 source env/bin/activate
 pip install uwsgi
 git clone https://bitbucket.org/rylcev_alexy/stream.git src
-cp ../nginx-rtmp-config-ruvds/local_settings.py src/cms/
+cp ../nginx-rtmp-config-ruvds-non-big/local_settings.py src/cms/
 cd src
 git checkout ver3.0
 mkdir static templates
@@ -41,7 +40,7 @@ pip install -r requirements.txt
 ./manage.py migrate
 ./manage.py collectstatic
 ./manage.py createsuperuser
-mkdir /mnt/data0/hls
+mkdir /tmp/hls
 sudo ln -s /home/alexy/stream/supervisor/production.conf /etc/supervisor/conf.d/stream.conf
 sudo supervisorctl update
 sudo supervisorctl status
