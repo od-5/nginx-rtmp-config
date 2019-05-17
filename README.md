@@ -6,9 +6,9 @@ su alexy
 cd /home/alexy
 sudo apt-get update
 sudo apt-get install unzip
-wget https://github.com/od-5/nginx-rtmp-config/archive/ruvds.zip
-unzip ruvds.zip
-nginx-rtmp-config-ruvds/script_stream.sh
+wget https://github.com/od-5/nginx-rtmp-config/archive/ruvds-non-big.zip
+unzip ruvds-non-big.zip
+nginx-rtmp-config-ruvds-non-big/script_stream.sh
 
 ```
 # в sudo crontab -e добавить
