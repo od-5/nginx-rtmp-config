@@ -16,5 +16,5 @@ DATABASES = {
 }
 CAM_SECURE_KEY = 'secret'
 CMD_KEY = '490683'
-WORK_PATH = '/mnt/data0'
+WORK_PATH = '/tmp'
 STREAM_ROOT = os.path.join(WORK_PATH, 'hls')
